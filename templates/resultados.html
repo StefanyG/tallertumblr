@@ -1,0 +1,32 @@
+{% extends "home.html" %}
+{% block title %} Resultados  {% endblock %}
+{% block navbar %}
+      <li><a href ="/"> Inicio</a></li> 
+{% endblock %}
+{% block header %} Resultados para {{search}}: {% endblock %}
+{% block form %}
+      <div class="container-fluid">
+	<div class="row">
+	  <div class="col-sm-3">
+	  {% for image in d1 %}
+	    <img src="{{ image }}" class="img-thumbnail" vspace="15">
+	  {% endfor %}
+	  </div>
+	  <div class="col-sm-3">
+	  {% for image in d2 %}
+	    <img src="{{ image }}" class="img-thumbnail" vspace="15">
+	  {% endfor %}
+	  </div>
+	  <div class="col-sm-3">
+	  {% for image in d3 %}
+	    <img src="{{ image }}" class="img-thumbnail" vspace="15">
+	  {% endfor %}
+	  </div>
+	  <div class="col-sm-3">
+	  {% for image in d4 %}
+	    <img src="{{ image }}" class="img-thumbnail" vspace="15">
+	  {% endfor %}
+	  </div>
+	</div>
+      </div>
+{% endblock %}

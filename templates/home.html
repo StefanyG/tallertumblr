@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<head>
+<title>{% block title %} Inicio {% endblock %}</title>
+</head>
+<body>
+<div class="navbar navbar-default">
+  <div class="navbar-collapse collapse navbar-responsive-collapse">
+    <ul class="nav navbar-nav navbar-right">
+      {%block navbar %}
+      <li class="active"><a href ="/"> Inicio</a></li> 
+       {% endblock %}
+    </ul>
+  </div>
+</div>
+<center> <h1>{% block header %} Busca un post  {% endblock %}</h1><br>
+{% block form %}
+<form class="form-inline" role="form" method="POST">
+  <div class="form-group">
+    <label for="search"></label>
+    <input type="text" class="form-control" name="search" placeholder="Busca">
+  </div>
+  <input type="submit" name= "sub" value="{% block button %} Ir {% endblock %}" class="btn btn-default"></input>
+</form>
+{% endblock %}
+</center>
+</body></html>
+{% endblock %}
+</div>
+
+<script src="scripts/main.js"></script>
+</body>
+</html>
